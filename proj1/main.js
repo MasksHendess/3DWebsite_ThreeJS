@@ -28,6 +28,10 @@ const geometry = new THREE.TorusGeometry( 8, 1, 5, 100 ); // width, Height, Dens
 // https://threejs.org/docs/#api/en/geometries/BoxGeometry 
 const material = new THREE.MeshStandardMaterial( {color:0xffffff });
 const torus = new THREE.Mesh( geometry, material);
+
+torus.position.z = 0;
+torus.position.x = 10;
+torus.position.y = -10;
 scene.add(torus);
 
 // Lighting
@@ -68,6 +72,9 @@ const planet = new THREE.Mesh(
     normalMap: normalTexture,
   })
   );
+  planet.position.z = 0;
+  planet.position.x = 10;
+  planet.position.y = -10;
 scene.add(planet);
 
 const moonTexture = new THREE.TextureLoader().load('moon.jpg');
